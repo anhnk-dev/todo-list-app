@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :tasks, only: %i(index new create)
+  resources :tasks, only: %i(index new create) do
+    member do
+      post :mark_completed
+    end
+  end
 end
