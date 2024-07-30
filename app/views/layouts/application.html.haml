@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta(content="text/html; charset=UTF-8" http-equiv="Content-Type")/
+    %title Todo List App
+    %meta(content="width=device-width,initial-scale=1" name="viewport")/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+  %body
+    .content.mt-20.w-full.px-6{ class: "lg:px-32" }
+      .flash-wrapper.m-auto.w-full.p-2{ class: "lg:w-10/12" }
+        %p.text-blue-600.notice= notice
+        %p.text-red-600.alert= alert
+      .tasks-wrapper.p-10.border.rounded-lg.border-gray-200.m-auto.w-fulll.mb-10{ class: "lg:w-10/12" }
+        = yield

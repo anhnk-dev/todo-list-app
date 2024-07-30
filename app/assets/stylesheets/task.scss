@@ -1,0 +1,25 @@
+.tasks-wrapper {
+  .task-item {
+    .new-task-btn {
+      svg { color: white; }
+    }
+
+    .priority {
+      font-size: 11px;
+      min-width: 135px;
+
+      &.high    { @apply bg-red-50 text-red-500 }
+      &.medium  { @apply bg-yellow-50 text-yellow-500 }
+      &.low     { @apply bg-green-50 text-green-500 }
+    }
+
+    .clock-icon {
+      @apply text-gray-500;
+
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      align-self: center;
+    }
+  }
+}

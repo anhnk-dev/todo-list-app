@@ -1,0 +1,6 @@
+.flex.mb-10
+  %h1.text-3xl.font-medium.w-full.text-gray-800 Tasks
+  = link_to new_task_path, class: "rounded-md p-2 text-sm font-semibold text-white bg-blue-600 new-task-btn" do
+    = inline_svg 'add_square.svg', class: 'add-icon'
+.tasks-list
+  = render partial: "tasks_list", locals: { tasks: @tasks }
