@@ -1,0 +1,5 @@
+.flex.mb-10
+  %h1.text-3xl.font-medium.w-full.text-gray-800 Add Task
+
+= form_for @task, url: tasks_path, method: :post, local: true do |f|
+  = render partial: 'form', locals: { f: f }
