@@ -10,7 +10,7 @@
 user = User.create(email: "user@example.com", password: "123456")
 
 # Create dummy tasks
-Task.create(title: "Check email", sub_title: "Quisque feugiat sem ut ex fringilla, vel molestie sem volutpat", priority: 2, due_date: Time.zone.now + 1.day, user: user)
-Task.create(title: "Conduct policy check & send emails", sub_title: "Donec purus lacus, finibus non porta a, tristique a augue", priority: 0, due_date: Time.zone.now + 2.days, user: user)
-Task.create(title: "Ask candidates about driver licenses and blue card", sub_title: "Eed in nisi scelerisque, porttitor massa non, elementum lacus", priority: 2, due_date: Time.zone.now + 2.day, user: user)
-Task.create(title: "Call references", sub_title: "Pellentesque mattis neque dui, sit amet efficitur", priority: 1, due_date: Time.zone.now + 3.day, user: user)
+Task.create(title: "Check email", sub_title: "Quisque feugiat sem ut ex fringilla, vel molestie sem volutpat", priority: 2, due_date: Time.zone.now + 1.day, user_id: user.id)
+Task.create(title: "Conduct policy check & send emails", sub_title: "Donec purus lacus, finibus non porta a, tristique a augue", priority: 0, due_date: Time.zone.now + 2.days, user_id: user.id)
+Task.create(title: "Ask candidates about driver licenses and blue card", sub_title: "Eed in nisi scelerisque, porttitor massa non, elementum lacus", priority: 2, due_date: Time.zone.now + 2.day, user_id: user.id)
+Task.create(title: "Call references", sub_title: "Pellentesque mattis neque dui, sit amet efficitur", priority: 1, due_date: Time.zone.now + 3.day, user_id: user.id)
